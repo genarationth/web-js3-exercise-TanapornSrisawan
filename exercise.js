@@ -16,33 +16,28 @@ console.log(cost(2500));
 // Exercise #2
 
 // Part 1
-// Ed would like a way to input 3 names of his friends.
-// The output should be a console greeting to his friends saying: 
-// `Welcome {name1}, {name2}, {name3}.`
 
-function greeting(name1, name2, name3){
-    console.log("Welcome "+ name1 + ", " + name2 + "," + name3);
+function greeting(name){
+    return name;
 }
-greeting('Ribbin','Mind','Bass');
-
+console.log(`Welcome ${greeting('Mai')}, ${greeting('Yeans')}, ${greeting('Ribbin')}`);
 // Part 2
-// Ed would like to create a function that takes in a birth year and returns the age.
-// i.e. 1990 returns 30
 
 function age(birthYear){
-    const calAge = 2023 - birthYear  ;
+    const currentYear =  new Date().getFullYear(); 
+    const calAge = currentYear - birthYear;
     return calAge;
 }
 console.log(age(1996));
 
 // Part 3
-// Ed would like to create a function that prints out,
-// `Welcome {name1}, you are {age1}. Welcome {name2}, 
-// you are {age2}. Welcome {name3}, you are {age3}.
-function welcome(name_1,age_1,name_2,age_2,name_3,age_3){
-    console.log(`Welcome ${name_1}, you are ${age_1}. Welcome ${name_2}, you are ${age_2}.Welcome ${name_3}, you are ${age_3}.`);
+
+function welcome(name,age){
+    return `Welcome  ${name}, you are ${age}` ;
 };
-welcome('Ribbin',27,'Phase',28,'Yuki',31);
+console.log(welcome('Mai',1995));
+console.log(welcome('Yeans',1998));
+console.log(welcome('Ribbin',1996));
 
 // Challenge Yourself
 // A teacher wants to create a rubric for grading. The rubric is from 0 - 11.
